@@ -1,9 +1,12 @@
+import Link from "next/link";
 import styles from "./navBar.module.css";
 
 const NavBar = () => (
   <nav className={styles.nav}>
     <div className={styles.navContent}>
-      <h3 className={styles.logoPlaceholder}>[ Logo goes here ]</h3>
+      <Link href="/" className={styles.logoUrl}>
+        <h3 className={styles.logoPlaceholder}>[ Logo goes here ]</h3>
+      </Link>
       <ExternalLink href="https://github.com/axrez">Github</ExternalLink>
       <ExternalLink href="https://www.linkedin.com/in/emil-oestergaard/">
         LinkedIn

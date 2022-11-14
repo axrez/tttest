@@ -25,3 +25,7 @@
 .logoPlaceholder {
   flex-grow: 1;
 }
+
+.logoUrl {
+  flex-grow: 1;
+}
