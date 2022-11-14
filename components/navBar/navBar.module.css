@@ -1,0 +1,27 @@
+.nav {
+  border-bottom: var(--border);
+  position: fixed;
+  background: var(--background);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navContent {
+  max-width: var(--max-column-width);
+  width: 100%;
+  margin-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+}
+
+.logoPlaceholder {
+  flex-grow: 1;
+}

@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  margin-top: 80px;
+  padding-bottom: 200px;
+  max-width: var(--max-column-width);
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 300;
+  padding: 8px;
+}

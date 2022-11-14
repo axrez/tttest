@@ -1,0 +1,6 @@
+.container {
+  max-width: var(--max-column-width);
+  margin-top: 4rem;
+  margin: 0 auto;
+  padding: 16px;
+}
