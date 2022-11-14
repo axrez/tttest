@@ -25,21 +25,38 @@ const Movie = async ({ params }: { params: { movieId: string } }) => {
 
   return (
     <main className={styles.container}>
-      <h1>{movie.title}</h1>
-      <p>
-        Rating: {movie.vote_average}/10 ({movie.vote_count} votes)
-      </p>
-      <p>{movie.overview}</p>
+      <div className={styles.infoContainer}>
+        <h1 className={styles.movieTitle}>{movie.title}</h1>
+        <p className={styles.rating}>
+          Rating: {movie.vote_average}/10 ({movie.vote_count} votes)
+        </p>
+        <p>{movie.overview}</p>
+      </div>
       <img
         alt={`Movie poster for ${movie.title}`}
         src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${movie.poster_path}`}
+        className={styles.poster}
       />
 
-      <div>
-        {credits.cast.map((c) => (
-          <p key={c.id}>{c.name}</p>
-        ))}
-      </div>
+      <section className={styles.castSection}>
+        <h2 className={styles.castHeader}>Cast</h2>
+        <ul className={styles.castList}>
+          {credits.cast.map((c) => (
+            <li key={c.id} className={styles.castContainer}>
+              <img
+                src={
+                  c.profile_path
+                    ? `https://www.themoviedb.org/t/p/w138_and_h175_face/${c.profile_path}`
+                    : "/avatar-placeholder.jpg"
+                }
+                alt=""
+                className={styles.castImage}
+              />
+              <p>{c.name}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 };

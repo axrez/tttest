@@ -1,6 +1,55 @@
 .container {
   max-width: var(--max-column-width);
-  margin-top: 4rem;
   margin: 0 auto;
+  margin-top: 4rem;
   padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr min(0.66fr, 300px);
+  grid-template-areas: "info poster" "cast poster";
+  grid-gap: 20px;
+}
+
+.movieTitle {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.rating {
+  color: var(--black-80);
+}
+
+.infoContainer {
+  grid-area: info;
+}
+
+.poster {
+  grid-area: poster;
+  border: var(--border);
+  width: min(300px, 40vw);
+}
+
+.castList {
+  list-style: none;
+}
+
+.castContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 8px;
+}
+
+.castHeader {
+  font-weight: 400;
+}
+
+.castSection {
+  grid-area: cast;
+}
+
+.castImage {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 50px;
 }
